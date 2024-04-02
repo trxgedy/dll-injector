@@ -48,7 +48,7 @@ namespace injection
 
 		if ( thread_handle.get( ) == INVALID_HANDLE_VALUE )
 		{
-			printf( "failed to open thread handle" );
+			std::cout << "failed to open thread handle";
 			return;
 		}
 
