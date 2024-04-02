@@ -19,7 +19,7 @@ int __stdcall main( )
   const auto inject_ = std::make_unique<injection::c_injection>( &target, &dll_path );
   inject_->thread_hijacking( );
 
-	std::cin.get( );
-	return EXIT_SUCCESS;
+  std::cin.get( );
+  return EXIT_SUCCESS;
 }
 ```
