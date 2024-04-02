@@ -11,7 +11,7 @@ TODO:
 
 ## 📘 Usage
 ```cpp
-int __stdcall main( )
+int main( )
 {
   std::string target = "process.exe";
   std::string dll_path = "path";
