@@ -1,5 +1,5 @@
 # 💾dll-injector
-- simple x86 dll injector
+- x86 dll injector
 
 ## 💉 injection methods
 - create remote thread
