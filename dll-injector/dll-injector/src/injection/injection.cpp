@@ -9,15 +9,12 @@ namespace injection
 		this->dll_path = *path;
 
 		if ( GetFileAttributesA( this->dll_path.c_str( ) ) == INVALID_FILE_ATTRIBUTES )
-		{
-			std::cout << "dll not found";
-			this->~c_injection( );
-		}
-
-		if ( this->pid != NULL )
-		{
-			this->handle = OpenProcess( PROCESS_ALL_ACCESS, false, this->pid );
-		}
+			throw std::runtime_error( "invalid dll path" );
+		
+		this->handle = OpenProcess( PROCESS_ALL_ACCESS, false, this->pid );
+	
+		if ( !this->handle )
+			throw std::runtime_error( "couldnt open the handle" );
 	}
 
 	c_injection::~c_injection( )
